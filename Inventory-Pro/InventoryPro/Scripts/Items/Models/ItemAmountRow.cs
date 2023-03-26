@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System;
-using System.Collections.Generic;
-using Devdog.General;
+﻿using Devdog.General;
 
 namespace Devdog.InventoryPro
 {
@@ -18,7 +15,6 @@ namespace Devdog.InventoryPro
         /// The amount of items required.
         /// </summary>
         public uint amount;
-
 
         public ItemAmountRow(InventoryItemBase item, uint amount)
         {

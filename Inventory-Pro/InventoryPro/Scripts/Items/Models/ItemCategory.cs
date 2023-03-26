@@ -22,7 +22,6 @@ namespace Devdog.InventoryPro
         [Range(0,999)]
         public float cooldownTime;
 
-
         [NonSerialized]
         private float _lastUsageTime;
         public float lastUsageTime

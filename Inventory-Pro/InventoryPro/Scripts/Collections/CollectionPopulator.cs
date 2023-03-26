@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Devdog.General.ThirdParty.UniLinq;
-using System.Text;
-using Devdog.General;
+﻿using Devdog.General;
 using UnityEngine;
 
 namespace Devdog.InventoryPro
@@ -28,7 +24,6 @@ namespace Devdog.InventoryPro
                 _items[i].gameObject.SetActive(false);
             }
         }
-
 
         protected void Start()
         {
