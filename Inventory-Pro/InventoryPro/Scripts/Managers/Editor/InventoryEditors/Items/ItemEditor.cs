@@ -447,13 +447,10 @@ namespace Devdog.InventoryPro.Editors
 			Debug.Log("Item ID's out of sync, force updating...");
 
 			//RepairPrefabLinks();
-
-
 			List<InventoryItemBase> crudListResult = new List<InventoryItemBase>();
 			var crudListCopy = crudList;
-			InventoryItemBase realPrefab = null;
 			uint lastID = 0;
-			for (int i = 0, j = 0; i < crudListCopy.Count; ++i)
+			for (int i = 0; i < crudListCopy.Count; ++i)
 			{
 				var item = crudListCopy[i];
 				if (item != null)
