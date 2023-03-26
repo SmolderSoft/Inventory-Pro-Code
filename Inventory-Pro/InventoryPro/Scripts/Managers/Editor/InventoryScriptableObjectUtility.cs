@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 using UnityEditor;
 using Devdog.General;
 using EditorUtility = UnityEditor.EditorUtility;
@@ -18,7 +17,7 @@ namespace Devdog.InventoryPro.Editors
 
         public static bool isPrefabsSaveFolderValid
         {
-            get { return AssetDatabase.IsValidFolder(prefabsSaveFolder); }
+            get { return AssetDatabase.IsValidFolder(prefabsSaveFolder) && !prefabsSaveFolder.Equals("Assets/"); }
         }
 
         public static string prefabsSaveFolder
