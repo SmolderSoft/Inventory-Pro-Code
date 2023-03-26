@@ -162,10 +162,7 @@ namespace Devdog.InventoryPro.Editors
                 col.isTrigger = true;
             }
 
-
-
             ShowOr();
-
 
             EditorGUILayout.BeginVertical();
             var boxStyle = new GUIStyle("HelpBox");
@@ -175,7 +172,6 @@ namespace Devdog.InventoryPro.Editors
             var rect = GUILayoutUtility.GetRect(390, 390, 200, 200);
             rect.x += 5;
             rect.width = 390;
-
 
             #region Accepting drag for box
 
@@ -221,9 +217,10 @@ namespace Devdog.InventoryPro.Editors
 
             #endregion
 
-
             if (step2Model == null)
+            {
                 GUI.Box(rect, "Drag object here", boxStyle);
+            }
             else
             {
                 var rect2 = rect;
@@ -242,9 +239,7 @@ namespace Devdog.InventoryPro.Editors
             }
             GUI.color = Color.white;
 
-
             ShowOr();
-
 
             if (Event.current.commandName == "ObjectSelectorUpdated")
             {
@@ -280,6 +275,7 @@ namespace Devdog.InventoryPro.Editors
                 EditorGUIUtility.ShowObjectPicker<Sprite>(step2Model, false, "", 124);
                 forceFocus = false;
             }
+
             EditorGUILayout.EndVertical();
 
             if (step2Model == null)
@@ -290,8 +286,8 @@ namespace Devdog.InventoryPro.Editors
             {
                 if(step2Model != null)
                     CreateItem(firstStepType, step2Model);
-
             }
+
             GUI.color = Color.white;
             GUI.enabled = true;
 
