@@ -1,8 +1,4 @@
-[submodule "Docs"]
-	path = Docs
-	url = https://github.com/devdogio/Inventory-Pro-Docs
-
 [submodule "General"]
-	path = Assets/Devdog/General
+	path = InventoryPro/General
 	url = https://github.com/Monsoonexe/devdogio-general
 	branch = master
