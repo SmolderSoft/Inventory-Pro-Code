@@ -73,6 +73,10 @@ namespace Devdog.General.Editors.GameRules
 
         public static void UpdateRules()
         {
+            // don't do this in playmode
+            if (Application.isPlaying)
+                return;
+
             allRules.Clear();
             allRules.AddRange(GetAllRules());
             foreach (var rule in allRules)
