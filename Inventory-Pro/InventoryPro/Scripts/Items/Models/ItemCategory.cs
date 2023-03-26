@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections.Generic;
 using Devdog.General;
 
 namespace Devdog.InventoryPro
