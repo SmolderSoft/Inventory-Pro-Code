@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
+﻿using System.Linq;
 using UnityEditor;
 
 namespace Devdog.InventoryPro.Editors
@@ -11,7 +7,6 @@ namespace Devdog.InventoryPro.Editors
     {
         protected SerializedProperty script;
         protected CustomOverrideProperty[] overrides;
-
 
         public virtual void OnEnable()
         {

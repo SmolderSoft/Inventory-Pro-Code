@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Collections;
-
 namespace Devdog.InventoryPro
 {
     /// <summary>
@@ -8,8 +5,6 @@ namespace Devdog.InventoryPro
     /// </summary>
     public partial class UnusableInventoryItem : InventoryItemBase
     {
-
-
         public override int Use()
         {
             base.Use();

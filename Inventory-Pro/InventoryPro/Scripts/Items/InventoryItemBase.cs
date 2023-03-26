@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System;
 using Devdog.General;
-using Devdog.InventoryPro;
-using UnityEngine.Assertions;
 using Devdog.General.ThirdParty.UniLinq;
 
 namespace Devdog.InventoryPro
@@ -15,7 +13,6 @@ namespace Devdog.InventoryPro
 //    [DisallowMultipleComponent]
     public partial class InventoryItemBase : MonoBehaviour, IEquatable<InventoryItemBase>
     {
-        
         #region Item data
 
         public uint index { get; set; }
@@ -412,7 +409,6 @@ namespace Devdog.InventoryPro
 
         #endregion
 
-
         /// <summary>
         /// Returns true if the item can be used, and false when the item cannot be used.
         /// Allows you to add your own conditions to items.
@@ -424,8 +420,6 @@ namespace Devdog.InventoryPro
         {
             canUseItemConditionals = new List<Predicate<InventoryItemBase>>();
         }
-
-
 
         /// <summary>
         /// Get the info of this box, useful when displaying this item.

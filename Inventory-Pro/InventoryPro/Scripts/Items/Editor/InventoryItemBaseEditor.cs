@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Devdog.General.Editors;
+using Devdog.General.ThirdParty.UniLinq;
 using EditorStyles = Devdog.General.Editors.EditorStyles;
 using EditorUtility = UnityEditor.EditorUtility;
 
@@ -36,7 +35,6 @@ namespace Devdog.InventoryPro.Editors
 		protected SerializedProperty isStorable;
 		protected SerializedProperty maxStackSize;
 		protected SerializedProperty cooldownTime;
-
 
 		private UnityEditorInternal.ReorderableList _statsList;
 		private UnityEditorInternal.ReorderableList _usageRequirementList;
@@ -85,7 +83,6 @@ namespace Devdog.InventoryPro.Editors
 			isStorable = serializedObject.FindProperty("_isStorable");
 			maxStackSize = serializedObject.FindProperty("_maxStackSize");
 			cooldownTime = serializedObject.FindProperty("_cooldownTime");
-
 
 			var t = (InventoryItemBase)target;
 
