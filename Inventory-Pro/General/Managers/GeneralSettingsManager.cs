@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿#pragma warning disable CS0618 // Assert.raiseExceptions is obsolete
 using UnityEngine.Assertions;
 
 namespace Devdog.General
@@ -21,3 +19,4 @@ namespace Devdog.General
         }
     }
 }
+#pragma warning restore CS0618 // Assert.raiseExceptions is obsolete
