@@ -29,11 +29,9 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-// precious: http://www.hookedonlinq.com
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Devdog.General.ThirdParty.UniLinq
 {
