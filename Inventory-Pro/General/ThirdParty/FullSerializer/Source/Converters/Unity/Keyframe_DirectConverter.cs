@@ -1,4 +1,5 @@
 #if !NO_UNITY
+#pragma warning disable CS0618 // Keyframe.tangentMode is obsolete
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,4 +55,6 @@ namespace Devdog.General.ThirdParty.FullSerializer.Internal.DirectConverters {
         }
     }
 }
+
+#pragma warning restore CS0618 // Keyframe.tangentMode is obsolete
 #endif
