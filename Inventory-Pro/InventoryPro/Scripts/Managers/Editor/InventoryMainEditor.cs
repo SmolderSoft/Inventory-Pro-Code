@@ -1,18 +1,10 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 using UnityEditor;
 using System.Collections.Generic;
-using System.Reflection;
 using Devdog.General.Editors;
 using Devdog.General.Editors.GameRules;
-using EditorUtility = UnityEditor.EditorUtility;
 using EditorStyles = Devdog.General.Editors.EditorStyles;
-
-#if PLY_GAME
-using Devdog.InventoryPro.Integration.plyGame.Editors;
-#endif
-
 
 namespace Devdog.InventoryPro.Editors
 {
@@ -32,7 +24,6 @@ namespace Devdog.InventoryPro.Editors
 
         private static IGameRule[] _gameRules = new IGameRule[0];
         private static InventoryMainEditor _window;
-		//        private string[] _databasesInProject;
 		private UnityEngine.SceneManagement.Scene previewScene;
 
 		public static InventoryMainEditor window
@@ -40,7 +31,7 @@ namespace Devdog.InventoryPro.Editors
             get
             {
                 if(_window == null)
-                    _window = GetWindow<InventoryMainEditor>(false, "Inventory Pro Manager", false);
+                    _window = GetWindow<InventoryMainEditor>("Inventory Pro Manager", false);
 
                 return _window;
             }
@@ -169,9 +160,6 @@ namespace Devdog.InventoryPro.Editors
 
             equipEditor = new EmptyEditor("Equipment editor", this);
             equipEditor.requiresDatabase = true;
-#if PLY_GAME
-            equipEditor.childEditors.Add(new plyStatsEditor("Ply stats", this));
-#endif
             equipEditor.childEditors.Add(new EquipmentTypeEditor("EquippedItem type", "EquippedItem types", this) { canReOrderItems = true });
             editors.Add(equipEditor);
 
